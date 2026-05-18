@@ -1,0 +1,27 @@
+---
+const { pathname } = Astro.url;
+const isActive = (path: string) => pathname === path || pathname === path + '/';
+---
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand" aria-label="Resolute Ambitions home">
+      <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="6" fill="#0a1e3a"/>
+        <path d="M32 10 L48 22 L48 38 C48 48 32 56 32 56 C32 56 16 48 16 38 L16 22 Z"
+              fill="none" stroke="#c9a961" stroke-width="3" stroke-linejoin="round"/>
+        <path d="M24 32 L30 38 L42 24" fill="none" stroke="#c9a961"
+              stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-text">
+        Resolute Ambitions
+        <small>Scholarships for future military officers</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/about" class={isActive('/about') ? 'active' : ''}>About</a>
+      <a href="/programs" class={isActive('/programs') ? 'active' : ''}>Programs</a>
+      <a href="/contact" class={isActive('/contact') ? 'active' : ''}>Contact</a>
+      <a href="/donate" class="btn btn-gold">Donate</a>
+    </nav>
+  </div>
+</header>

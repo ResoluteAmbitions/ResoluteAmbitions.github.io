@@ -1,0 +1,36 @@
+---
+// Donorbox embed component.
+// To activate: replace CAMPAIGN_SLUG below with your Donorbox campaign slug
+// (found at app.donorbox.org once your account is approved). The Donorbox
+// account requires an EIN, so this will go live after entity registration.
+//
+// Docs: https://github.com/donorbox/donorbox-popup
+export interface Props {
+  campaignSlug?: string;
+  height?: string;
+}
+const { campaignSlug, height = '700px' } = Astro.props;
+---
+{campaignSlug ? (
+  <>
+    <iframe
+      src={`https://donorbox.org/embed/${campaignSlug}?default_interval=o`}
+      name="donorbox"
+      seamless="seamless"
+      frameborder="0"
+      scrolling="no"
+      height={height}
+      width="100%"
+      style="max-width: 500px; min-width: 250px; max-height: none !important;"
+      allow="payment"
+      title="Donate to Resolute Ambitions"
+    ></iframe>
+    <script is:inline src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+  </>
+) : (
+  <div class="donate-embed-placeholder">
+    <strong>Donation portal coming soon</strong>
+    <p>We are completing 501(c)(3) registration. Once approved, contributions will be accepted here and will be retroactively tax-deductible.</p>
+    <p style="margin-bottom: 0;"><a href="mailto:info@resoluteambitions.com">Email us</a> to be notified when donations open.</p>
+  </div>
+)}
