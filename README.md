@@ -6,7 +6,7 @@ Marketing site for Resolute Ambitions, a scholarship nonprofit for future U.S. m
 
 - [Astro](https://astro.build) — static-site generator, zero JS by default
 - Deployed to GitHub Pages via `.github/workflows/deploy.yml`
-- Custom domain: `resoluteambitions.com` (CNAME in `public/CNAME`)
+- Lives at `https://resoluteambitions.github.io/` (org-level Pages site — repo is named `ResoluteAmbitions.github.io`). Custom domain `resoluteambitions.com` is owned but not yet wired; to attach it later: add `public/CNAME` with the apex, point DNS A records at GitHub Pages, then set `cname` via `gh api -X PUT repos/ResoluteAmbitions/ResoluteAmbitions.github.io/pages -f cname=resoluteambitions.com`
 
 ## Develop
 

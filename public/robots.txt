@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://resoluteambitions.com/sitemap.xml
+Sitemap: https://resoluteambitions.github.io/sitemap.xml
