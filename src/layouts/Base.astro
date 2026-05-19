@@ -13,7 +13,7 @@ const {
   description = 'Resolute Ambitions provides scholarships to future U.S. military officers — high school candidates pursuing ROTC or service academy preparation, and enlisted service members pursuing officer commissioning.',
 } = Astro.props;
 
-const siteUrl = 'https://resoluteambitions.github.io';
+const siteUrl = 'https://staging.resoluteambitions.com';
 const canonical = new URL(Astro.url.pathname, siteUrl).toString();
 ---
 <!DOCTYPE html>
@@ -22,6 +22,7 @@ const canonical = new URL(Astro.url.pathname, siteUrl).toString();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="generator" content={Astro.generator} />
+  <meta name="robots" content="noindex, nofollow, noarchive" />
   <title>{title} — Resolute Ambitions</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonical} />

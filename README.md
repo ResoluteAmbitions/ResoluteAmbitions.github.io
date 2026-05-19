@@ -6,8 +6,9 @@ Marketing site for Resolute Ambitions, a scholarship nonprofit for future U.S. m
 
 - [Astro](https://astro.build) — static-site generator, zero JS by default
 - Deployed to GitHub Pages via `.github/workflows/deploy.yml`
-- Currently serves at `https://resoluteambitions.github.io/` only — the custom domain `resoluteambitions.com` is intentionally **detached** until the site is ready to publish. DNS for the apex is unwired in Cloudflare; email routing on the domain remains active.
-- To re-attach the custom domain later: (1) add `public/CNAME` with `resoluteambitions.com`, (2) in Cloudflare, add A records for the apex (185.199.108.153, .109.153, .110.153, .111.153) — optionally AAAA and a `www` CNAME to `resoluteambitions.github.io` — proxied through CF, (3) `gh api -X PUT repos/ResoluteAmbitions/ResoluteAmbitions.github.io/pages -f cname=resoluteambitions.com`, (4) revert `site:` in `astro.config.mjs` and `siteUrl` in `src/layouts/Base.astro` and the sitemap URL in `public/robots.txt` to `resoluteambitions.com`, and remove the `Disallow: /` in `robots.txt`.
+- Currently serves at `https://staging.resoluteambitions.com/` as a pre-launch preview. The apex `resoluteambitions.com` is intentionally **not** pointing at the site yet; email routing on the domain is intact.
+- Indexing is suppressed three ways while in staging: `public/CNAME` is the staging subdomain, `public/robots.txt` is `Disallow: /`, and `src/layouts/Base.astro` injects `<meta name="robots" content="noindex, nofollow, noarchive">` on every page.
+- To launch on the apex later: (1) set `public/CNAME` to `resoluteambitions.com`, (2) in Cloudflare, add A records for the apex (185.199.108.153, .109.153, .110.153, .111.153) — optionally AAAA and a `www` CNAME to `resoluteambitions.github.io` — proxied, (3) `gh api -X PUT repos/ResoluteAmbitions/ResoluteAmbitions.github.io/pages -f cname=resoluteambitions.com`, (4) update `site:` in `astro.config.mjs`, `siteUrl` in `src/layouts/Base.astro`, and the sitemap URL in `public/robots.txt` to `resoluteambitions.com`, (5) remove the `<meta name="robots" ...>` line and switch `robots.txt` back to `Allow: /`. (Note: the staging subdomain will stop working since GH Pages allows one custom domain per repo.)
 
 ## Develop
 
