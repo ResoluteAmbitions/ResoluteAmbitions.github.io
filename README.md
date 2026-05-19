@@ -6,7 +6,8 @@ Marketing site for Resolute Ambitions, a scholarship nonprofit for future U.S. m
 
 - [Astro](https://astro.build) — static-site generator, zero JS by default
 - Deployed to GitHub Pages via `.github/workflows/deploy.yml`
-- Custom domain: `resoluteambitions.com` (CNAME in `public/CNAME`), DNS managed in Cloudflare (zone `a2bf11a0ef3e412a713cdbde0c5f7748`, account `CWS`). Apex points at GitHub Pages A/AAAA records; `www` CNAMEs to `resoluteambitions.github.io`. DNS-only (not Cloudflare-proxied) so GH Pages can issue its own Let's Encrypt cert.
+- Currently serves at `https://resoluteambitions.github.io/` only — the custom domain `resoluteambitions.com` is intentionally **detached** until the site is ready to publish. DNS for the apex is unwired in Cloudflare; email routing on the domain remains active.
+- To re-attach the custom domain later: (1) add `public/CNAME` with `resoluteambitions.com`, (2) in Cloudflare, add A records for the apex (185.199.108.153, .109.153, .110.153, .111.153) — optionally AAAA and a `www` CNAME to `resoluteambitions.github.io` — proxied through CF, (3) `gh api -X PUT repos/ResoluteAmbitions/ResoluteAmbitions.github.io/pages -f cname=resoluteambitions.com`, (4) revert `site:` in `astro.config.mjs` and `siteUrl` in `src/layouts/Base.astro` and the sitemap URL in `public/robots.txt` to `resoluteambitions.com`, and remove the `Disallow: /` in `robots.txt`.
 
 ## Develop
 
