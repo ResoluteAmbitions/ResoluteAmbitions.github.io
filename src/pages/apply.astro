@@ -1,31 +1,64 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Apply" description="Apply for a Resolute Ambitions scholarship for future U.S. military officers.">
-  <section class="page-intro">
+<Base title="Apply" description="Scholarships for high school students and enlisted service members pursuing a military officer commission.">
+  <section class="band band-navy page-intro">
     <div class="container">
-      <div class="eyebrow dark">Apply</div>
-      <h1>Applications are not yet open.</h1>
+      <span class="bar"></span>
+      <h1>Apply</h1>
       <p class="lede">
-        We will publish the application form and timeline here once 501(c)(3) status is granted and the inaugural scholarship cycle is funded.
+        Applications are not yet open. We will publish the application form and timeline here once the first scholarship cycle is funded.
       </p>
     </div>
   </section>
 
-  <section>
+  <section class="band band-green">
     <div class="container">
-      <!-- TODO(content): application steps, timeline, and form. Source: docs/messaging/. -->
       <h2>Who can apply</h2>
-      <ul class="checked">
-        <li>High school juniors and seniors headed to accredited colleges or universities with ROTC programs.</li>
-        <li>Active-duty enlisted service members pursuing undergraduate education for officer commissioning.</li>
-      </ul>
-      <p>Full eligibility and selection criteria are on <a href="/how-it-works">How It Works</a>.</p>
+      <p>U.S. citizens or permanent residents who show a genuine intent to become military officers.</p>
+      <div class="tracks">
+        <div class="track">
+          <span class="bar"></span>
+          <h3>High school students and families</h3>
+          <p class="hook">“You chose to lead. We'll help you get there without the debt.”</p>
+          <p>Juniors and seniors headed to a college with ROTC, or in service academy prep.</p>
+        </div>
+        <div class="track">
+          <span class="bar"></span>
+          <h3>Enlisted service members</h3>
+          <p class="hook">“You already answered the call. Now lead.”</p>
+          <p>Active-duty enlisted members of any branch pursuing the degree they need to commission, through programs such as Green to Gold, STA-21 or OCS/OTS.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <section class="band">
+    <div class="container split">
+      <h2>What we look for</h2>
+      <div>
+        {/* TODO(content): application steps, required documents, and timeline. */}
+        <p>A competitive, merit-based review. Financial need is one of the criteria, along with:</p>
+        <ul class="bars">
+          <li>Academic achievement and potential</li>
+          <li>Commitment to military service</li>
+          <li>Leadership</li>
+          <li>Recommendations</li>
+          <li>A personal statement</li>
+        </ul>
+        <p>Scholarships can cover tuition, fees, room and board, books and testing costs, paid directly to your school. <a href="/how-it-works">How it works →</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="band band-steel">
+    <div class="container split">
       <h2>Get notified</h2>
-      <p>
-        <a href="/newsletter">Join the newsletter</a> or <a href="mailto:info@resoluteambitions.com">email us</a> and we will let you know when applications open.
-      </p>
+      <div>
+        <p>
+          <a href="/newsletter">Join the newsletter</a> or <a href="mailto:info@resoluteambitions.com">email us</a> and we will tell you when applications open.
+        </p>
+      </div>
     </div>
   </section>
 </Base>

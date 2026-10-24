@@ -7,3 +7,7 @@ dist/
 *.log
 .vscode/
 .idea/
+
+# Local-only working context (repo is public)
+/private/
+/OPERATIONS.md

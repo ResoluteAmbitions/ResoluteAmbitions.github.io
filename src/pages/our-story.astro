@@ -1,57 +1,105 @@
 ---
 import Base from '../layouts/Base.astro';
 ---
-<Base title="Our Story" description="Resolute Ambitions exists to advance education and relieve financial hardship for future U.S. military officers.">
-  <section class="page-intro">
+<Base title="Our Story" description="Same room, two paths. The founders of Resolute Ambitions and why they started it.">
+  <section class="band band-navy page-intro">
     <div class="container">
-      <div class="eyebrow dark">Our Story</div>
-      <h1>A calling shouldn't come with a credit balance.</h1>
+      <span class="bar"></span>
+      <h1>Same room, two paths.</h1>
       <p class="lede">
-        Commitment to military service is a call to serve — not the most financially attractive career path for many. Resolute Ambitions exists to change the decision calculus for elite candidates and to help those who do choose service enter the fleet focused on being the best warfighting leader they can be.
+        Our founders sat in the same unit at 20. One stayed and now develops the officers the country depends on. One left and protected the systems its economy runs on. Both got there because they made it into the room.
       </p>
     </div>
   </section>
 
-  <section>
+  <section class="band">
+    <div class="container split">
+      <div class="split-head">
+        <h2>Chris Kennedy</h2>
+        <p class="byline">Co-founder. Former Marine officer, Vanderbilt NROTC Class of 1997.</p>
+      </div>
+      <div>
+        <p class="lede">
+          Chris grew up poor in Nashville. His single mother was struggling, and his grandfather, a carpenter, took in family and workers alike.
+        </p>
+        <p>
+          His grandfather gave him two rules: work hard every day, and get a great education so you don't have to work as hard as I did. His mother pushed him into magnet schools. College was never going to be affordable, so the military was his path.
+        </p>
+        <p>
+          He calls what followed “seven accidents,” seven things that didn't have to go right:
+        </p>
+        <ol class="numbered">
+          <li><strong>The recruiter.</strong> Chris had already signed up as an enlisted Navy nuclear machinist's mate. His recruiter went back through his file and pushed him to apply for an ROTC scholarship. That meant giving up an enlistment that counted toward the recruiter's own quota.</li>
+          <li><strong>Vanderbilt.</strong> The scholarship was a bet. Chris had to fund freshman year on loans, and the Navy would pay the rest only if he held a 3.0.</li>
+          <li><strong>Losing it, and being caught.</strong> Between his ego, hard engineering courses and two part-time jobs, he lost the scholarship. John Borst, a classmate's father, loaned him the money to stay. Chris earned the scholarship back.</li>
+          <li><strong>The company he kept.</strong> The Marines in his unit drew him to the Marine Corps. Thirty years later they're general officers and leaders, and they're still his closest circle.</li>
+          <li><strong>Colonel Heesacker,</strong> who mentored him through the switch to the Marine option.</li>
+          <li><strong>Lieutenant Colonel Bennett,</strong> who personally drove him to the Navy medical center and fought a disqualifying eye finding weeks before his commissioning.</li>
+          <li><strong>The billet.</strong> The Marine Corps merged its radio and data communications fields the year he chose his specialty. That landed a 22-year-old as the first head of cybersecurity for the largest Marine Corps base, in a field that barely existed yet.</li>
+        </ol>
+        <p>
+          The cyber head start led to Treasury, where he headed cybersecurity incident response for nearly a decade, and then to running technology and security at major financial institutions.
+        </p>
+        <p>
+          He left the Corps after seven years. He wasn't unhappy; the Corps had made him so employable that a civilian offer made the decision for him, and his loans were part of that calculation. Years later, he and his wife were still paying off their own student loans while funding college savings plans for their two daughters: four educations out of one household at once.
+        </p>
+        <p>
+          In November 2025, his class gathered for the Marine Corps' 250th birthday. He looked around a room of general officers, airline captains, physicians and technologists who had all come through the same door, and Resolute Ambitions was conceived that night.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* TODO(content): Cam Lewis's story goes here, same layout as Chris's. */}
+
+  <section class="band band-navy">
     <div class="container">
-      <!-- TODO(content): founders' story goes here. Source: docs/messaging/. -->
-      <h2>The founders</h2>
-      <div class="callout">
-        Our founders' story is coming soon.
+      <blockquote class="quote">
+        <p>“I got lucky. I would like to be somebody else's luck.”</p>
+        <cite>Chris Kennedy</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <section class="band band-green">
+    <div class="container split">
+      <h2>Money buys proximity.</h2>
+      <div>
+        <p class="lede">
+          Tuition buys a seat, and the seat puts you in the room with the people who change your life. Nobody ever knows the mentor they didn't meet.
+        </p>
+        <p>
+          The debt shadow lasts decades. It sits in the middle of every decision: when to marry, when to have kids, whether you can afford to stay in a job you love.
+        </p>
+        <p>
+          Luck is not a strategy for staffing the leadership of the United States military.
+        </p>
       </div>
+    </div>
+  </section>
 
-      <h2>Our purpose</h2>
-      <p>
-        The Resolute Ambitions Project exists to advance education and relieve financial hardship by providing scholarships to:
-      </p>
-      <ul class="checked">
-        <li>High school students who demonstrate intent to pursue military officer commissioning through ROTC or service academy preparation programs.</li>
-        <li>Active-duty enlisted service members seeking to complete or pursue collegiate education required for officer commissioning through programs such as Green to Gold, Seaman to Admiral (STA-21), OCS, and OTS.</li>
-      </ul>
-
-      <h2>Why this work matters</h2>
-      <p>
-        Research indicates roughly 70–75% of military officers enter service carrying student loan debt. While service academies and full ROTC scholarships provide comprehensive educational funding, those opportunities are limited — academies produce only ~15% of new officers each year, and only ~25–27% of ROTC scholarship applicants receive an award.
-      </p>
-      <p>
-        Officers commissioning through OCS or OTS must complete a bachelor's degree at their own expense before entry. Average student debt for officers from non-scholarship paths ranges from $25,000 to $40,000 — substantially higher for those at elite institutions or in specialized fields like law and medicine.
-      </p>
-      <div class="callout">
-        Our military leaders disproportionately come from middle- and lower-income backgrounds. The cost of the collegiate requirement, modest early-career pay, and the practical impossibility of meaningful side income during active service combine into a real decision barrier — one that can deter candidates who would otherwise answer the call.
-      </div>
-      <p>
-        Many honor their calling by accepting they must carry substantial debt while managing the early start-up costs of a military career: uniforms, family moves, continuing education. Resolute Ambitions is about changing that math.
-      </p>
-
+  <section class="band band-steel">
+    <div class="container split">
       <h2>How we operate</h2>
-      <p>
-        The organization is governed by a volunteer Board of Directors and operates with minimal administrative overhead to maximize scholarship funding. Initial operations are conducted by volunteers; paid staff will be hired only as growth warrants and funds permit. Scholarship funds are disbursed directly to accredited institutions on behalf of recipients — never to individuals — and enrollment and academic progress are verified before each disbursement.
-      </p>
+      <div>
+        <p>
+          A volunteer Board of Directors with minimal overhead. Initial operations are run by volunteers, and paid staff will be hired only as growth and funds allow.
+        </p>
+        <p>
+          Scholarship money goes directly to the school, never to the individual. Recipients are chosen by an independent selection committee. <a href="/how-it-works">How it works →</a>
+        </p>
+      </div>
+    </div>
+  </section>
 
+  <section class="band band-navy">
+    <div class="container split">
       <h2>Status</h2>
-      <p>
-        Resolute Ambitions has filed for 501(c)(3) recognition. Incorporation and EIN are in progress. Contributions made now will be retroactively tax-deductible to our filing date upon IRS approval. Please consult your tax advisor.
-      </p>
+      <div>
+        <p>
+          The IRS recognized Resolute Ambitions as tax-exempt under section 501(c)(3) on October 1, 2026. Gifts are tax-deductible to the extent allowed by law.
+        </p>
+      </div>
     </div>
   </section>
 </Base>
