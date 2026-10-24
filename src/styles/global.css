@@ -8,7 +8,7 @@
   --gold-bright: #f3c170;
   --rose: #a4303f;        /* Cherry Rose */
   --rose-dark: #8a2534;
-  --green: #415d43;       /* Hunter Green */
+  --green: #4b5320;       /* Dark olive green: accent only, never a background */
   --steel: #a1a1aa;       /* Cool Steel */
   --steel-tint: #e2e2e6;
   --ink: #16191f;
@@ -144,11 +144,9 @@ a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
 .band { padding: 5rem 0; }
 .band > .container > :first-child { margin-top: 0; }
 .band-navy { background: var(--navy); color: rgba(250, 250, 247, 0.88); }
-.band-green { background: var(--green); color: rgba(250, 250, 247, 0.92); }
 .band-steel { background: var(--steel-tint); }
-.band-navy h1, .band-navy h2, .band-navy h3,
-.band-green h1, .band-green h2, .band-green h3 { color: var(--paper); }
-.band-navy a, .band-green a { color: var(--paper); }
+.band-navy h1, .band-navy h2, .band-navy h3 { color: var(--paper); }
+.band-navy a { color: var(--paper); }
 .band-steel + .band-steel { padding-top: 0; }
 
 .lede { font-size: 1.3rem; line-height: 1.5; max-width: 40rem; }
@@ -199,6 +197,8 @@ a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
 .track h3 { margin-top: 0; font-size: 1.5rem; }
 .track .bar { width: 2rem; height: 0.3rem; margin-bottom: 1.25rem; }
 .tracks-light, .tracks-light .track + .track { border-color: var(--rule); }
+.tracks-light .bar { background: var(--green); }
+.tracks-light .hook { color: var(--green); }
 
 /* Pull quote */
 .pull {
@@ -230,8 +230,8 @@ a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
   margin-bottom: 1.25rem;
 }
 .quote cite { font-family: var(--sans); font-style: normal; font-size: 0.9375rem; color: var(--gold); }
-.band-steel .quote p, .band:not(.band-navy):not(.band-green) .quote p { color: var(--navy); }
-.band:not(.band-navy):not(.band-green) .quote cite { color: var(--slate); }
+.band:not(.band-navy) .quote p { color: var(--navy); }
+.band:not(.band-navy) .quote cite { color: var(--slate); }
 
 /* Audience hook, set above a track or section */
 .hook { font-family: var(--serif); font-style: italic; font-size: 1.2rem; line-height: 1.4; margin-bottom: 0.9rem; }
@@ -280,7 +280,7 @@ ul.bars li::before {
   height: 3px;
   background: var(--green);
 }
-.band-green ul.bars li::before, .band-navy ul.bars li::before { background: var(--gold); }
+.band-navy ul.bars li::before { background: var(--gold); }
 
 /* Footer */
 .site-footer {
