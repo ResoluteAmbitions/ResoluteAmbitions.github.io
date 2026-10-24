@@ -2,27 +2,33 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Home" description="Resolute Ambitions removes financial barriers for future U.S. military officers — scholarships for ROTC candidates, service academy hopefuls, and enlisted service members pursuing commissioning.">
-  <section class="hero">
+  <section class="band band-navy hero">
     <div class="container">
-      <div class="eyebrow">A Scholarship Mission</div>
+      <span class="bar"></span>
       <h1>Service should not start with debt.</h1>
-      <p>
+      <p class="lede">
         Scholarships for future U.S. military officers — ROTC and service academy candidates, and enlisted pursuing commissioning — so they enter the fleet ready to lead, not to repay.
       </p>
       <div class="hero-actions">
         <a href="/give" class="btn btn-give">Support a Scholar</a>
-        <a href="/how-it-works" class="btn btn-ghost" style="color: #fafaf7 !important; border-color: rgba(250,250,247,0.4);">How It Works</a>
+        <a href="/how-it-works" class="btn btn-outline">How It Works</a>
       </div>
     </div>
   </section>
 
-  <section>
+  <section class="band">
     <div class="container">
-      <div class="eyebrow dark">The Problem</div>
-      <h2>Most officers begin their service in debt.</h2>
-      <p class="lede">
-        Service academies and full ROTC scholarships are limited and highly competitive. The majority of new officers commission through paths that do not cover the cost of their education.
-      </p>
+      <div class="split">
+        <h2>Most officers begin their service in debt.</h2>
+        <div>
+          <p class="lede">
+            Service academies and full ROTC scholarships are limited and highly competitive. The majority of new officers commission through paths that do not cover the cost of their education.
+          </p>
+          <p>
+            Military leadership disproportionately comes from middle- and lower-income backgrounds. The cost of college, modest early-career pay, and the practical impossibility of a meaningful side income during active service create a real decision barrier — one that pushes qualified candidates away from a calling they would otherwise answer.
+          </p>
+        </div>
+      </div>
       <div class="stats">
         <div class="stat">
           <span class="num">70–75%</span>
@@ -41,49 +47,48 @@ import Base from '../layouts/Base.astro';
           <div class="label">average debt for officers from non-scholarship paths</div>
         </div>
       </div>
-      <p style="margin-top: 2.5rem;">
-        Military leadership disproportionately comes from middle- and lower-income backgrounds. The cost of college, modest early-career pay, and the practical impossibility of a meaningful side income during active service create a real decision barrier — one that pushes qualified candidates away from a calling they would otherwise answer.
-      </p>
     </div>
   </section>
 
-  <section class="muted">
+  <section class="band band-green">
     <div class="container">
-      <div class="eyebrow dark">Our Response</div>
       <h2>Change the calculus. Then get out of the way.</h2>
       <p class="lede">
         We award merit-based scholarships to two groups, with funds paid directly to accredited institutions for tuition, fees, books, room and board, and required testing.
       </p>
-      <div class="grid">
-        <div class="card">
-          <span class="num">Track 01</span>
+      <div class="tracks">
+        <div class="track">
+          <span class="bar"></span>
           <h3>High school candidates</h3>
           <p>
             For juniors and seniors enrolled in or accepted to accredited colleges and universities with ROTC programs, who demonstrate genuine intent to pursue an officer commission.
           </p>
         </div>
-        <div class="card">
-          <span class="num">Track 02</span>
+        <div class="track">
+          <span class="bar"></span>
           <h3>Enlisted service members</h3>
           <p>
             For active-duty enlisted in any branch pursuing undergraduate education for commissioning through Green to Gold, STA-21, OCS, OTS, or similar programs.
           </p>
         </div>
       </div>
-      <p style="margin-top: 2.5rem;">
+      <p style="margin-top: 2rem;">
         <a href="/how-it-works">See selection criteria and eligibility →</a>
       </p>
     </div>
   </section>
 
-  <section>
-    <div class="container" style="text-align: center;">
-      <div class="eyebrow dark">Support the Mission</div>
-      <h2 style="margin-top: 0.5rem;">Every dollar funds a future officer.</h2>
-      <p class="lede" style="margin: 1rem auto 2rem;">
-        Resolute Ambitions runs lean — volunteer board, minimal overhead, scholarship funds paid directly to schools. Your contribution goes to the candidate.
-      </p>
-      <a href="/give" class="btn btn-give">Donate</a>
+  <section class="band band-steel">
+    <div class="container">
+      <div class="split">
+        <h2>Every dollar funds a future officer.</h2>
+        <div>
+          <p class="lede">
+            Resolute Ambitions runs lean — volunteer board, minimal overhead, scholarship funds paid directly to schools. Your contribution goes to the candidate.
+          </p>
+          <a href="/give" class="btn btn-give">Donate</a>
+        </div>
+      </div>
     </div>
   </section>
 </Base>
