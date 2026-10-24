@@ -28,7 +28,7 @@ To activate live donations:
 1. Complete entity incorporation and obtain an EIN.
 2. Create a Donorbox account, verify the EIN, and create a campaign.
 3. Set the campaign slug in `src/pages/give.astro` (`DONORBOX_SLUG`).
-4. Update the disclosure copy in `src/pages/give.astro` once 501(c)(3) is granted.
+4. 501(c)(3) was approved October 1, 2026; the tax-deductibility note is in `src/pages/give.astro` and `src/pages/our-story.astro`.
 
 Until a campaign slug is set, the Give page renders a "coming soon" placeholder.
 
