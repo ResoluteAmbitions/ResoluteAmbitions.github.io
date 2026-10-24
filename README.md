@@ -10,12 +10,6 @@ Marketing site for Resolute Ambitions, a scholarship nonprofit for future U.S. m
 - Indexing is suppressed three ways while in staging: `public/CNAME` is the staging subdomain, `public/robots.txt` is `Disallow: /`, and `src/layouts/Base.astro` injects `<meta name="robots" content="noindex, nofollow, noarchive">` on every page.
 - To launch on the apex later: (1) set `public/CNAME` to `resoluteambitions.com`, (2) in Cloudflare, add A records for the apex (185.199.108.153, .109.153, .110.153, .111.153) — optionally AAAA and a `www` CNAME to `resoluteambitions.github.io` — proxied, (3) `gh api -X PUT repos/ResoluteAmbitions/ResoluteAmbitions.github.io/pages -f cname=resoluteambitions.com`, (4) update `site:` in `astro.config.mjs`, `siteUrl` in `src/layouts/Base.astro`, and the sitemap URL in `public/robots.txt` to `resoluteambitions.com`, (5) remove the `<meta name="robots" ...>` line and switch `robots.txt` back to `Allow: /`. (Note: the staging subdomain will stop working since GH Pages allows one custom domain per repo.)
 
-## Docs
-
-- `docs/BRAND.md`: color palette, accessibility, usage rules
-- `docs/SITE_PLAN.md`: target page set and status of each page
-- `docs/messaging/`: approved messaging from comms/marketing and the founders
-
 ## Develop
 
 ```bash
@@ -46,7 +40,6 @@ src/
   layouts/      # Base layout (head, header, footer wrapper)
   pages/        # index, our-story, how-it-works, apply, give, for-schools-and-units, newsletter, contact
   styles/       # global.css
-docs/           # BRAND.md (palette + rules), SITE_PLAN.md (pages + status), messaging/ (copy sources)
 public/         # CNAME, favicon, robots.txt — copied as-is to /
 .github/workflows/deploy.yml   # GH Pages deploy on push to main
 ```

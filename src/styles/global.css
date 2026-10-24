@@ -1,7 +1,6 @@
 :root {
-  /* Brand palette: represents all who serve; never map a color to a branch.
-     Navy, steel, and bronze carry the brand. Rose is reserved for giving/action.
-     Bronze is never text on a light background. */
+  /* Rose is reserved for Give buttons and key stats.
+     Bronze is never text on a light background (fails contrast); use it on navy or as lines. */
   --navy: #031846;
   --navy-dark: #020f2e;
   --navy-light: #0e2d6e;
