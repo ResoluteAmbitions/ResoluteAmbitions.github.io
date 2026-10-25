@@ -1,71 +1,66 @@
 ---
 import Base from '../layouts/Base.astro';
 import Donorbox from '../components/Donorbox.astro';
+import Photo from '../components/Photo.astro';
 
 // Set this to your Donorbox campaign slug once the account is approved.
 // Example: 'resolute-ambitions-general-fund'
 const DONORBOX_SLUG: string | undefined = undefined;
 ---
 <Base title="Give" description="Every dollar reaches the candidate. Support scholarships for future U.S. military officers.">
-  <section class="band band-navy page-intro">
+  <section class="page-hero">
     <div class="container">
-      <span class="bar"></span>
       <h1>Every dollar reaches the candidate.</h1>
-      <p class="lede">
+      <p>
         Resolute Ambitions closes the gap so that character, commitment and potential decide who leads, not money.
       </p>
     </div>
   </section>
 
-  <section class="band band-steel">
-    <div class="container">
-      <div class="donate-wrap">
-        <div>
-          <h2>Where your gift goes</h2>
-          <ul class="bars">
-            <li>Tuition and mandatory fees</li>
-            <li>Room and board</li>
-            <li>Books and required materials</li>
-            <li>Testing and certification fees</li>
-          </ul>
-          <p>
-            Money goes directly to the school, never to the individual. Enrollment and academic progress are verified before every payment. Recipients are chosen by an independent selection committee, and the board is all volunteers.
-          </p>
-
-          <div class="note">
-            <p><strong>Tax-deductible.</strong> The IRS recognized Resolute Ambitions as tax-exempt under section 501(c)(3) on October 1, 2026. Gifts are tax-deductible to the extent allowed by law. Please consult your tax advisor for guidance specific to your situation.</p>
-          </div>
+  <section class="section">
+    <div class="container donate-wrap">
+      <div>
+        <h2>Where your gift goes</h2>
+        <ul class="bars">
+          <li>Tuition and mandatory fees</li>
+          <li>Room and board</li>
+          <li>Books and required materials</li>
+          <li>Testing and certification fees</li>
+        </ul>
+        <p>
+          Money goes directly to the school, never to the individual. Enrollment and academic progress are verified before every payment. Recipients are chosen by an independent selection committee, and the board is all volunteers.
+        </p>
+        <div class="note">
+          <p><strong>Tax-deductible.</strong> The IRS recognized Resolute Ambitions as tax-exempt under section 501(c)(3) on October 1, 2026. Gifts are tax-deductible to the extent allowed by law. Please consult your tax advisor for guidance specific to your situation.</p>
         </div>
-
-        <aside>
-          <div class="donate-embed">
-            <Donorbox campaignSlug={DONORBOX_SLUG} />
-          </div>
-        </aside>
       </div>
+      <aside class="donate-embed">
+        <Donorbox campaignSlug={DONORBOX_SLUG} />
+      </aside>
     </div>
   </section>
 
-  <section class="band band-mid">
-    <div class="container">
+  <section class="section section-alt">
+    <div class="container cols">
+      <Photo hint="A newly commissioned officer, or a pinning ceremony" ratio="4 / 3" tone="blue" />
       <blockquote class="quote">
         <p>“You paid off loans on an O-1 salary. They shouldn't have to.”</p>
       </blockquote>
     </div>
   </section>
 
-  <section class="band">
+  <section class="section">
     <div class="container">
-      <h2>Other ways to give</h2>
-      <div class="tracks tracks-light">
-        <div class="track">
-          <span class="bar"></span>
+      <div class="section-head">
+        <h2>Other ways to give</h2>
+      </div>
+      <div class="cards">
+        <div class="card">
           <h3>Through your company</h3>
           <p class="hook">“Invest in the next generation of military leaders.”</p>
           <p>Matching gifts and corporate sponsorships multiply what you give. <a href="mailto:info@resoluteambitions.com?subject=Corporate%20giving">Introduce us to your company's giving team.</a></p>
         </div>
-        <div class="track">
-          <span class="bar"></span>
+        <div class="card">
           <h3>Foundations</h3>
           <p class="hook">“A measurable gap with a disciplined solution.”</p>
           <p>Governance, selection process and disbursement controls are on <a href="/how-it-works">How it works</a>. <a href="mailto:info@resoluteambitions.com?subject=Foundation%20grant">Talk to us about a grant.</a></p>

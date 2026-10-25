@@ -2,21 +2,21 @@
 import Base from '../layouts/Base.astro';
 ---
 <Base title="Newsletter" description="Sign up for Resolute Ambitions updates.">
-  <section class="band band-navy page-intro">
+  <section class="page-hero">
     <div class="container">
-      <span class="bar"></span>
       <h1>Stay in the loop.</h1>
-      <p class="lede">
-        Milestone updates on scholarship cycles, recipients and the mission.
-      </p>
+      <p>Milestone updates on scholarship cycles, recipients and the mission.</p>
     </div>
   </section>
 
-  <section class="band">
+  <section class="section">
     <div class="container">
-      {/* TODO: embed the signup form once a newsletter provider is chosen. */}
-      <div class="pull">
-        Online signup is coming soon. Until then, <a href="mailto:info@resoluteambitions.com?subject=Newsletter">email us</a> and we will add you to the list.
+      <div class="section-head">
+        {/* TODO: embed the signup form once a newsletter provider is chosen. */}
+        <p>Online signup is coming soon. Until then, email us and we will add you to the list.</p>
+        <div class="actions">
+          <a href="mailto:info@resoluteambitions.com?subject=Newsletter" class="btn">Email us to join</a>
+        </div>
       </div>
     </div>
   </section>
