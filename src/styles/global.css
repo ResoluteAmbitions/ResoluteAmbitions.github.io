@@ -1,14 +1,19 @@
 :root {
   /* Rose is reserved for Give buttons and key stats.
      Bronze is never text on a light background (fails contrast); use it on navy or as lines. */
-  --navy: #031846;
-  --navy-dark: #020f2e;
-  --navy-light: #0e2d6e;
-  --gold: #edae49;        /* Honey Bronze */
-  --gold-bright: #f3c170;
-  --rose: #a4303f;        /* Cherry Rose */
-  --rose-dark: #8a2534;
-  --green: #4b5320;       /* Dark olive green: accent only, never a background */
+  /* Service colors, together representing all who serve; never labeled by branch.
+     Red is reserved for Give buttons and key stats. Gold is for lines and marks only.
+     Green is an accent only, never a background. */
+  --navy: #002f6c;        /* primary dark: hero, page intros */
+  --deep: #15263b;        /* header and footer */
+  --blue: #144a75;        /* section band */
+  --blue-mid: #133e68;    /* quote bands */
+  --link: #103065;        /* links on light backgrounds, button hover */
+  --gold: #998542;        /* rules, bars, underlines */
+  --red: #d31f09;         /* Give buttons */
+  --red-deep: #990f00;    /* key stats, Give hover */
+  --green: #4b5320;       /* list markers, hooks */
+  --orange: #ff5000;      /* keyboard focus */
   --steel: #a1a1aa;       /* Cool Steel */
   --steel-tint: #e2e2e6;
   --ink: #16191f;
@@ -49,7 +54,7 @@ h3 { font-size: 1.3rem; line-height: 1.25; margin: 1.6em 0 0.4em; }
 
 p { margin: 0 0 1em; max-width: var(--measure); }
 
-a { color: var(--navy); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
 
 .container {
@@ -62,12 +67,14 @@ a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
   position: absolute;
   left: -9999px;
   top: 0;
-  background: var(--gold);
+  background: var(--paper);
   color: var(--navy);
   padding: 0.75rem 1rem;
   z-index: 100;
 }
 .skip-link:focus { left: 1rem; top: 1rem; }
+
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
 
 /* The gold bar: a new officer's first insignia, used as the site's section mark */
 .bar {
@@ -80,7 +87,7 @@ a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
 
 /* Header */
 .site-header {
-  background: var(--navy);
+  background: var(--deep);
   border-bottom: 1px solid rgba(250, 250, 247, 0.14);
   position: sticky;
   top: 0;
@@ -134,19 +141,22 @@ a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
   font-size: 0.9375rem;
   cursor: pointer;
 }
-.btn:hover { background: var(--navy-light); }
-.btn-give { background: var(--rose); }
-.btn-give:hover { background: var(--rose-dark); }
+.btn:hover { background: var(--link); }
+.btn-give { background: var(--red); }
+.btn-give:hover { background: var(--red-deep); }
 .btn-outline { background: transparent; color: var(--paper) !important; border-color: rgba(250, 250, 247, 0.6); }
 .btn-outline:hover { background: transparent; border-color: var(--gold); }
 
 /* Full-width color bands */
 .band { padding: 5rem 0; }
 .band > .container > :first-child { margin-top: 0; }
-.band-navy { background: var(--navy); color: rgba(250, 250, 247, 0.88); }
+.band-navy { background: var(--navy); }
+.band-blue { background: var(--blue); }
+.band-mid { background: var(--blue-mid); }
+:is(.band-navy, .band-blue, .band-mid) { color: rgba(250, 250, 247, 0.88); }
 .band-steel { background: var(--steel-tint); }
-.band-navy h1, .band-navy h2, .band-navy h3 { color: var(--paper); }
-.band-navy a { color: var(--paper); }
+:is(.band-navy, .band-blue, .band-mid) :is(h1, h2, h3) { color: var(--paper); }
+:is(.band-navy, .band-blue, .band-mid) a { color: var(--paper); }
 .band-steel + .band-steel { padding-top: 0; }
 
 .lede { font-size: 1.3rem; line-height: 1.5; max-width: 40rem; }
@@ -182,7 +192,7 @@ a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
 }
 .stat { padding: 1.5rem 1.5rem 0 0; }
 .stat + .stat { padding-left: 1.5rem; border-left: 1px solid var(--rule); }
-.stat .num { font-family: var(--serif); font-size: clamp(2rem, 3.6vw, 2.9rem); font-weight: 700; color: var(--rose); line-height: 1; display: block; letter-spacing: -0.02em; }
+.stat .num { font-family: var(--serif); font-size: clamp(2rem, 3.6vw, 2.9rem); font-weight: 700; color: var(--red-deep); line-height: 1; display: block; letter-spacing: -0.02em; }
 .stat .label { font-family: var(--sans); font-size: 0.875rem; line-height: 1.45; color: var(--slate); margin-top: 0.75rem; }
 
 /* Two scholarship tracks, set side by side on green */
@@ -229,9 +239,9 @@ a:hover { text-decoration-color: var(--gold); text-decoration-thickness: 2px; }
   max-width: none;
   margin-bottom: 1.25rem;
 }
-.quote cite { font-family: var(--sans); font-style: normal; font-size: 0.9375rem; color: var(--gold); }
-.band:not(.band-navy) .quote p { color: var(--navy); }
-.band:not(.band-navy) .quote cite { color: var(--slate); }
+.quote cite { font-family: var(--sans); font-style: normal; font-size: 0.9375rem; color: rgba(250, 250, 247, 0.8); }
+.band:not(.band-navy, .band-blue, .band-mid) .quote p { color: var(--navy); }
+.band:not(.band-navy, .band-blue, .band-mid) .quote cite { color: var(--slate); }
 
 /* Audience hook, set above a track or section */
 .hook { font-family: var(--serif); font-style: italic; font-size: 1.2rem; line-height: 1.4; margin-bottom: 0.9rem; }
@@ -280,11 +290,11 @@ ul.bars li::before {
   height: 3px;
   background: var(--green);
 }
-.band-navy ul.bars li::before { background: var(--gold); }
+:is(.band-navy, .band-blue, .band-mid) ul.bars li::before { background: var(--gold); }
 
 /* Footer */
 .site-footer {
-  background: var(--navy);
+  background: var(--deep);
   border-top: 6px solid var(--gold);
   color: rgba(250, 250, 247, 0.75);
   padding: 3.5rem 0 1.5rem;
@@ -292,10 +302,10 @@ ul.bars li::before {
   font-size: 0.9375rem;
 }
 .site-footer a { color: rgba(250, 250, 247, 0.88); text-decoration: none; }
-.site-footer a:hover { color: var(--gold); }
+.site-footer a:hover { color: var(--paper); text-decoration: underline; text-decoration-color: var(--gold); }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; margin-bottom: 2.5rem; }
 .footer-name { font-family: var(--serif); font-size: 1.35rem; font-weight: 700; color: var(--paper); margin: 0 0 0.75rem; }
-.footer-grid h4 { color: var(--gold); font-size: 0.875rem; font-weight: 700; margin: 0 0 1rem; }
+.footer-grid h4 { color: var(--paper); font-size: 0.875rem; font-weight: 700; margin: 0 0 1rem; }
 .footer-grid ul { list-style: none; padding: 0; margin: 0; }
 .footer-grid li { margin-bottom: 0.5rem; }
 .footer-bottom { border-top: 1px solid rgba(250, 250, 247, 0.14); padding-top: 1.5rem; font-size: 0.8125rem; color: rgba(250, 250, 247, 0.6); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
@@ -303,7 +313,7 @@ ul.bars li::before {
 /* Give page */
 .donate-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 4rem; align-items: start; }
 .donate-wrap h2 { margin-top: 0; }
-.donate-embed { background: var(--paper); border-top: 6px solid var(--rose); padding: 1.5rem; }
+.donate-embed { background: var(--paper); border-top: 6px solid var(--red); padding: 1.5rem; }
 .donate-embed-placeholder { color: var(--slate); font-family: var(--sans); font-size: 0.9375rem; padding: 1rem; }
 .donate-embed-placeholder strong { display: block; font-family: var(--serif); color: var(--navy); font-size: 1.4rem; margin-bottom: 0.75rem; }
 
