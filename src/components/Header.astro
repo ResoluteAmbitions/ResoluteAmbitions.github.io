@@ -3,7 +3,7 @@ const { pathname } = Astro.url;
 const isActive = (path: string) => pathname === path || pathname === path + '/';
 ---
 <header class="site-header">
-  <div class="ribbon" aria-hidden="true"></div>
+  <div class="ribbon" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
   <div class="container">
     <a href="/" class="brand" aria-label="Resolute Ambitions home">
       <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
