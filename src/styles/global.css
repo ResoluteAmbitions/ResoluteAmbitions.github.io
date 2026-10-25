@@ -71,10 +71,10 @@ a:hover { text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 
 /* Header */
 .site-header { background: var(--paper); position: sticky; top: 0; z-index: 10; box-shadow: 0 1px 0 var(--rule); }
-.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-top: 0.85rem; padding-bottom: 0.85rem; }
-.brand { display: flex; align-items: center; gap: 0.7rem; text-decoration: none; color: var(--navy); }
-.brand-mark { width: 40px; height: 40px; flex-shrink: 0; }
-.brand-text { font-family: var(--display); font-size: 1.7rem; line-height: 1; text-transform: uppercase; letter-spacing: 0.02em; }
+.site-header .container { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-top: 0.7rem; padding-bottom: 0.7rem; }
+.brand { display: inline-flex; flex-direction: column; align-items: stretch; gap: 0.15rem; text-decoration: none; color: var(--navy); }
+.brand-text { font-family: var(--display); font-size: 2rem; line-height: 0.95; text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap; }
+.brand-blade { display: block; width: 0; min-width: 100%; height: auto; }
 
 .nav { display: flex; gap: 1.6rem; align-items: center; }
 .nav a {
