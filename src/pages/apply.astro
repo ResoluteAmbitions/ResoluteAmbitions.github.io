@@ -1,30 +1,32 @@
 ---
 import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
 ---
 <Base title="Apply" description="Scholarships for high school students and enlisted service members pursuing a military officer commission.">
-  <section class="band band-navy page-intro">
+  <section class="page-hero">
     <div class="container">
-      <span class="bar"></span>
       <h1>Apply</h1>
-      <p class="lede">
+      <p>
         Applications are not yet open. We will publish the application form and timeline here once the first scholarship cycle is funded.
       </p>
     </div>
   </section>
 
-  <section class="band band-steel">
+  <section class="section">
     <div class="container">
-      <h2>Who can apply</h2>
-      <p>U.S. citizens or permanent residents who show a genuine intent to become military officers.</p>
-      <div class="tracks tracks-light">
-        <div class="track">
-          <span class="bar"></span>
+      <div class="section-head">
+        <h2>Who can apply</h2>
+        <p>U.S. citizens or permanent residents who show a genuine intent to become military officers.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <Photo hint="A high school student headed to ROTC, with family" ratio="3 / 2" />
           <h3>High school students and families</h3>
           <p class="hook">“You chose to lead. We'll help you get there without the debt.”</p>
           <p>Juniors and seniors headed to a college with ROTC, or in service academy prep.</p>
         </div>
-        <div class="track">
-          <span class="bar"></span>
+        <div class="card">
+          <Photo hint="An enlisted service member in class or studying" ratio="3 / 2" />
           <h3>Enlisted service members</h3>
           <p class="hook">“You already answered the call. Now lead.”</p>
           <p>Active-duty enlisted members of any branch pursuing the degree they need to commission, through programs such as Green to Gold, STA-21 or OCS/OTS.</p>
@@ -33,31 +35,33 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
-  <section class="band">
-    <div class="container split">
-      <h2>What we look for</h2>
-      <div>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
         {/* TODO(content): application steps, required documents, and timeline. */}
+        <h2>What we look for</h2>
         <p>A competitive, merit-based review. Financial need is one of the criteria, along with:</p>
-        <ul class="bars">
-          <li>Academic achievement and potential</li>
-          <li>Commitment to military service</li>
-          <li>Leadership</li>
-          <li>Recommendations</li>
-          <li>A personal statement</li>
-        </ul>
-        <p>Scholarships can cover tuition, fees, room and board, books and testing costs, paid directly to your school. <a href="/how-it-works">How it works →</a></p>
+      </div>
+      <ul class="bars bars-center">
+        <li>Academic achievement and potential</li>
+        <li>Commitment to military service</li>
+        <li>Leadership</li>
+        <li>Recommendations</li>
+        <li>A personal statement</li>
+      </ul>
+      <div class="section-head" style="margin-top: 3rem;">
+        <p>Scholarships can cover tuition, fees, room and board, books and testing costs, paid directly to your school. <a href="/how-it-works">How it works</a></p>
       </div>
     </div>
   </section>
 
-  <section class="band band-navy">
-    <div class="container split">
+  <section class="cta">
+    <div class="container">
       <h2>Get notified</h2>
-      <div>
-        <p>
-          <a href="/newsletter">Join the newsletter</a> or <a href="mailto:info@resoluteambitions.com">email us</a> and we will tell you when applications open.
-        </p>
+      <p>Join the newsletter or email us and we will tell you when applications open.</p>
+      <div class="actions">
+        <a href="/newsletter" class="btn btn-white">Join the newsletter</a>
+        <a href="mailto:info@resoluteambitions.com?subject=Applications" class="btn btn-light">Email us</a>
       </div>
     </div>
   </section>

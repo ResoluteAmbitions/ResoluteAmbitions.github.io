@@ -1,0 +1,23 @@
+---
+// A photo slot. Until `src` is set it renders a placeholder naming the photo it needs.
+export interface Props {
+  src?: string;
+  alt?: string;
+  hint: string;
+  ratio?: string;
+  tone?: 'blue';
+}
+
+const { src, alt = '', hint, ratio = '4 / 3', tone } = Astro.props;
+const classes = ['photo', !src && 'photo-empty', tone === 'blue' && 'photo-blue'].filter(Boolean).join(' ');
+---
+<figure class={classes} style={`--ratio: ${ratio}`}>
+  {src ? (
+    <img src={src} alt={alt} loading="lazy" />
+  ) : (
+    <>
+      <span>Photo to come</span>
+      <small>{hint}</small>
+    </>
+  )}
+</figure>

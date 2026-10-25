@@ -1,34 +1,29 @@
 ---
 import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
 ---
 <Base title="How It Works" description="Who we serve, what we pay for, how we choose recipients, and how scholarship money is paid.">
-  <section class="band band-navy page-intro">
+  <section class="page-hero">
     <div class="container">
-      <span class="bar"></span>
       <h1>How it works</h1>
-      <p class="lede">
+      <p>
         Resolute Ambitions supports high-potential students and enlisted service members pursuing the path to military officership. Through scholarships and educational support, we reduce the financial burden that too often stands between talented people and a career of service.
       </p>
     </div>
   </section>
 
-  <section class="band">
-    <div class="container split">
-      <h2>Who we serve</h2>
+  <section class="section">
+    <div class="container cols cols-top">
       <div>
+        <h2>Who we serve</h2>
         <p>U.S. citizens or permanent residents who show a genuine intent to become military officers, and who are either:</p>
         <ul class="bars">
           <li>High school juniors or seniors headed to a college with ROTC, or in service academy prep; or</li>
           <li>Active-duty enlisted service members of any branch pursuing the degree they need to commission, through programs such as Green to Gold, STA-21 or OCS/OTS.</li>
         </ul>
       </div>
-    </div>
-  </section>
-
-  <section class="band band-blue">
-    <div class="container split">
-      <h2>What we pay for</h2>
       <div>
+        <h2>What we pay for</h2>
         <ul class="bars">
           <li>Tuition and mandatory fees</li>
           <li>Room and board</li>
@@ -39,58 +34,58 @@ import Base from '../layouts/Base.astro';
     </div>
   </section>
 
-  <section class="band">
-    <div class="container split">
-      <h2>How we choose</h2>
-      <div>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>How we choose</h2>
         <p>
           A competitive, merit-based review by an independent selection committee of board members and volunteers with relevant backgrounds: educators, veterans and financial professionals. Committee members recuse themselves from any applicant they know personally.
         </p>
         <p>Financial need is one of the criteria, along with:</p>
-        <ul class="bars">
-          <li>Academic achievement and potential</li>
-          <li>Commitment to military service</li>
-          <li>Leadership</li>
-          <li>Recommendations</li>
-          <li>A personal statement</li>
-        </ul>
       </div>
+      <ul class="bars bars-center">
+        <li>Academic achievement and potential</li>
+        <li>Commitment to military service</li>
+        <li>Leadership</li>
+        <li>Recommendations</li>
+        <li>A personal statement</li>
+      </ul>
     </div>
   </section>
 
-  <section class="band band-steel">
-    <div class="container split">
-      <h2>How the money is paid</h2>
+  <section class="section">
+    <div class="container cols">
       <div>
+        <h2>How the money is paid</h2>
         <ul class="bars">
           <li>Money goes directly to the school, never to the individual.</li>
           <li>Enrollment and academic progress are verified before every payment.</li>
         </ul>
         <p>Recipients keep satisfactory academic progress, stay on the officer path, send an annual progress report, and tell us if their plans change.</p>
       </div>
+      <Photo hint="A campus or classroom, ideally a recipient's school" ratio="4 / 3" />
     </div>
   </section>
 
-  <section class="band">
-    <div class="container split">
-      <h2>Beyond scholarships</h2>
-      <div>
-        <ul class="bars">
-          <li>Information on officer career pathways</li>
-          <li>Guidance on scholarship and commissioning applications</li>
-          <li>Workshops for prospective applicants</li>
-        </ul>
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>Beyond scholarships</h2>
       </div>
+      <ul class="bars bars-center">
+        <li>Information on officer career pathways</li>
+        <li>Guidance on scholarship and commissioning applications</li>
+        <li>Workshops for prospective applicants</li>
+      </ul>
     </div>
   </section>
 
-  <section class="band band-navy">
-    <div class="container split">
-      <h2>Applications are not yet open.</h2>
-      <div>
-        <p>
-          We will publish the application form and timeline once the first scholarship cycle is funded. <a href="/apply">Get notified →</a>
-        </p>
+  <section class="cta">
+    <div class="container">
+      <h2>Applications are not yet open</h2>
+      <p>We will publish the application form and timeline once the first scholarship cycle is funded.</p>
+      <div class="actions">
+        <a href="/apply" class="btn btn-white">Get notified</a>
       </div>
     </div>
   </section>

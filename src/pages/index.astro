@@ -1,36 +1,63 @@
 ---
 import Base from '../layouts/Base.astro';
+import Photo from '../components/Photo.astro';
 ---
 <Base title="Home">
-  <section class="band band-navy hero">
+  {/* Hero photo: add style="--photo: url('/photos/hero.jpg')" to the section. */}
+  <section class="hero">
     <div class="container">
-      <span class="bar"></span>
       <h1>Service should not start with debt.</h1>
-      <p class="lede">
-        We make sure those who choose to lead don't begin their service in debt.
-      </p>
-      <div class="hero-actions">
+      <p>We make sure those who choose to lead don't begin their service in debt.</p>
+      <div class="actions">
         <a href="/give" class="btn btn-give">Give</a>
-        <a href="/how-it-works" class="btn btn-outline">How it works</a>
+        <a href="/how-it-works" class="btn btn-light">How it works</a>
+        <a href="/apply" class="btn btn-light">Apply</a>
       </div>
     </div>
   </section>
 
-  <section class="band">
+  <section class="section">
     <div class="container">
-      <div class="split">
-        <h2>The math is broken.</h2>
+      <div class="section-head">
+        <h2>About Resolute Ambitions</h2>
+        <p>
+          Resolute Ambitions supports high-potential students and enlisted service members pursuing the path to military officership. Through scholarships and educational support, we reduce the financial burden that too often stands between talented people and a career of service.
+        </p>
+      </div>
+      <div class="cols">
         <div>
-          <p class="lede">
-            Becoming a military officer requires a college degree. The fully funded paths (service academies and full ROTC scholarships) reach only a fraction of the people who commission.
-          </p>
-          <p>
-            Everyone else pays for some or all of their education themselves. They borrow, pick a cheaper school than the one that admitted them, or give up on service for a career that pays more.
-          </p>
-          <p>
-            Once they commission, they can't earn their way out. Pay comes from a fixed public pay table, and deployments and moves make a second income nearly impossible. There is no side hustle in a deployment.
-          </p>
+          <ul class="stars">
+            <li>
+              <h3>The math is broken</h3>
+              <p>Most officers start out in debt, the fully funded paths are limited, and early-career pay leaves little room to pay it down.</p>
+            </li>
+            <li>
+              <h3>Chosen to lead</h3>
+              <p>Our recipients have already committed: a high schooler signing up for ROTC, or an enlisted service member going after the degree to commission.</p>
+            </li>
+            <li>
+              <h3>Every dollar reaches the candidate</h3>
+              <p>A volunteer board, money paid directly to schools, progress checked before every payment, and an independent selection committee.</p>
+            </li>
+            <li>
+              <h3>Built by people who've lived it</h3>
+              <p>A founding circle of officers and professionals who came through the same door.</p>
+            </li>
+          </ul>
+          <a href="/our-story" class="btn">Read our story</a>
         </div>
+        <Photo hint="Candidates, cadets or a commissioning ceremony" ratio="4 / 5" />
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <h2>The problem, in plain terms</h2>
+        <p>
+          Becoming a military officer requires a college degree. The fully funded paths (service academies and full ROTC scholarships) reach only a fraction of the people who commission. Everyone else pays for some or all of their education themselves.
+        </p>
       </div>
       <div class="stats">
         <div class="stat">
@@ -50,62 +77,60 @@ import Base from '../layouts/Base.astro';
           <div class="label">Rise in private tuition since Congress last set the ROTC cadet stipend ceiling, in FY2001.</div>
         </div>
       </div>
-      <blockquote class="quote" style="margin-top: 4.5rem;">
-        <p>We don't lose these candidates in the interview. We lose them at the tuition bill.</p>
+      <blockquote class="quote">
+        <p>“We don't lose these candidates in the interview. We lose them at the tuition bill.”</p>
       </blockquote>
     </div>
   </section>
 
-  <section class="band band-blue">
+  <section class="section">
     <div class="container">
-      <h2>Chosen to lead.</h2>
-      <p class="lede">
-        Our recipients have already committed: a high schooler signing up for ROTC, or an enlisted service member going after the degree to commission. We fill the middle, the gap between where scholarships and family help end and the bill begins.
-      </p>
-      <div class="tracks">
-        <div class="track">
-          <span class="bar"></span>
+      <div class="section-head">
+        <h2>Who we serve</h2>
+        <p>
+          Our recipients have already committed. We fill the middle, the gap between where scholarships and family help end and the bill begins.
+        </p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <Photo hint="A high school student headed to ROTC" ratio="3 / 2" />
           <h3>High school candidates</h3>
           <p class="hook">“You chose to lead. We'll help you get there without the debt.”</p>
           <p>Juniors and seniors headed to a college with ROTC, or in service academy prep.</p>
         </div>
-        <div class="track">
-          <span class="bar"></span>
+        <div class="card">
+          <Photo hint="An enlisted service member working toward a commission" ratio="3 / 2" />
           <h3>Enlisted service members</h3>
           <p class="hook">“You already answered the call. Now lead.”</p>
           <p>Active-duty enlisted members of any branch pursuing the degree they need to commission, through programs such as Green to Gold, STA-21 or OCS/OTS.</p>
         </div>
       </div>
-      <p style="margin-top: 2rem;">
-        <a href="/how-it-works">Who's eligible and how we choose →</a>
-      </p>
-    </div>
-  </section>
-
-  <section class="band band-steel">
-    <div class="container split">
-      <h2>Every dollar reaches the candidate.</h2>
-      <div>
-        <ul class="bars">
-          <li>A volunteer board with minimal overhead</li>
-          <li>Money paid directly to schools, never to individuals</li>
-          <li>Enrollment and academic progress checked before every payment</li>
-          <li>An independent selection committee with conflict-of-interest rules</li>
-        </ul>
-        <a href="/give" class="btn btn-give">Give</a>
+      <div class="actions">
+        <a href="/how-it-works" class="btn">Who's eligible and how we choose</a>
       </div>
     </div>
   </section>
 
-  <section class="band band-mid">
-    <div class="container">
-      <span class="bar"></span>
-      <h2>Built by people who've lived it.</h2>
-      <blockquote class="quote" style="margin-top: 2.5rem;">
+  <section class="section section-alt">
+    <div class="container cols">
+      <blockquote class="quote">
         <p>“I got lucky. I would like to be somebody else's luck.”</p>
         <cite>Chris Kennedy, co-founder</cite>
+        <div class="actions">
+          <a href="/our-story" class="btn">Read our story</a>
+        </div>
       </blockquote>
-      <p style="margin-top: 2.5rem;"><a href="/our-story">Read our story →</a></p>
+      <Photo hint="Portrait of Chris Kennedy" ratio="4 / 5" tone="blue" />
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <h2>Every dollar reaches the candidate</h2>
+      <p>Money goes directly to the school, never to the individual, and progress is checked before every payment.</p>
+      <div class="actions">
+        <a href="/give" class="btn btn-give">Give</a>
+      </div>
     </div>
   </section>
 </Base>
