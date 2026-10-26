@@ -67,7 +67,7 @@ a:hover { text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 .skip-link:focus { left: 1rem; top: 1rem; }
 
 :focus-visible { outline: 3px solid var(--navy); outline-offset: 2px; }
-:is(.hero, .page-hero, .cta, .site-footer) :focus-visible { outline-color: var(--paper); }
+:is(.hero, .page-hero, .block, .site-footer) :focus-visible { outline-color: var(--paper); }
 
 /* Ribbon: one bar per service, in order of precedence */
 .ribbon { display: flex; gap: 3px; height: 6px; background: var(--paper); }
@@ -121,19 +121,30 @@ a:hover { text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 .btn-give:hover { background: var(--red-hover); }
 .btn-light { background: transparent; border-color: rgba(255, 255, 255, 0.75); }
 .btn-light:hover { background: rgba(255, 255, 255, 0.12); }
-.btn-white { background: var(--paper); color: var(--navy) !important; }
+.btn-white { background: var(--paper); color: var(--page, var(--navy)) !important; }
 .btn-white:hover { background: var(--mist); }
+/* Give on a colored block: white button, scarlet label, so it still reads as Give */
+.btn-give-light { background: var(--paper); color: var(--red) !important; }
+.btn-give-light:hover { background: var(--mist); }
 .actions { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-top: 2rem; }
 .actions-left { justify-content: flex-start; }
 
-/* Heroes: navy, ready for a background photo via --photo */
+/* Page colors: each page owns one service color, set on <main> by the layout */
+.c-olive { --page: var(--green); }
+.c-navy  { --page: var(--navy); }
+.c-af    { --page: var(--blue); }
+.c-cg    { --page: var(--blue-mid); }
+.c-red   { --page: var(--red); }
+.c-space { --page: var(--deep); }
+
+/* Heroes: the page color, ready for a background photo via --photo */
 .hero, .page-hero {
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
   background:
-    linear-gradient(rgba(0, 47, 108, 0.86), rgba(0, 47, 108, 0.86)),
+    linear-gradient(color-mix(in srgb, var(--page, var(--navy)) 86%, transparent), color-mix(in srgb, var(--page, var(--navy)) 86%, transparent)),
     var(--photo, none) center / cover,
-    var(--navy);
+    var(--page, var(--navy));
 }
 .hero { padding: 7rem 0 6.5rem; }
 .page-hero { padding: 5rem 0 4.5rem; text-align: left; }
@@ -178,7 +189,7 @@ a:hover { text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 
 /* Plain lists marked with a short green rule */
 ul.bars { list-style: none; padding: 0; margin: 0 0 1.25em; max-width: var(--measure); }
-.bars-center { margin-left: auto; margin-right: auto; width: fit-content; }
+ul.bars.bars-center { margin-left: auto; margin-right: auto; width: fit-content; }
 ul.bars li { padding-left: 1.5rem; position: relative; margin-bottom: 0.5em; }
 ul.bars li::before { content: ''; position: absolute; left: 0; top: 0.78em; width: 0.75rem; height: 3px; background: var(--green); }
 
@@ -203,12 +214,25 @@ ol.numbered strong { color: var(--navy); }
 .quote p { font-family: var(--serif); font-size: clamp(1.6rem, 3vw, 2.25rem); line-height: 1.3; color: var(--navy); max-width: 30ch; margin: 0 auto 1.25rem; }
 .quote cite { font-style: normal; font-size: 0.78rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--slate); }
 .quote .actions { margin-top: 1.75rem; }
+.quote-left { text-align: left; margin-top: 2rem; }
+.quote-left p { margin-left: 0; }
 
-/* Call-to-action band */
-.cta { background: var(--blue-mid); color: rgba(255, 255, 255, 0.9); text-align: center; padding: 5rem 0; }
-.cta h2 { color: var(--paper); }
-.cta p { margin-left: auto; margin-right: auto; font-size: 1.125rem; }
-.cta a:not(.btn) { color: var(--paper); }
+/* Color blocks: full-width sections in the page color (or a .c-* override) */
+.block { background: var(--page, var(--navy)); color: rgba(255, 255, 255, 0.9); padding: 6rem 0; }
+.block-center { text-align: center; }
+.block-center p { margin-left: auto; margin-right: auto; font-size: 1.125rem; }
+.block :is(h1, h2, h3) { color: var(--paper); }
+.block a:not(.btn) { color: var(--paper); }
+.block .section-head p, .block .stars p { color: rgba(255, 255, 255, 0.85); }
+.block .stars li::before, .block ul.bars li::before { background: var(--paper); }
+.block ol.numbered li::before { color: var(--paper); }
+.block .hook { color: var(--paper); }
+.block .quote p { color: var(--paper); }
+.block .quote cite { color: rgba(255, 255, 255, 0.8); }
+.block .btn:not(.btn-light):not(.btn-give-light) { background: var(--paper); color: var(--page, var(--navy)) !important; }
+.block .btn:not(.btn-light):not(.btn-give-light):hover { background: var(--mist); }
+.block .photo-empty { background: repeating-linear-gradient(135deg, rgba(255,255,255,0.10) 0 12px, rgba(255,255,255,0.05) 12px 24px); border-color: rgba(255, 255, 255, 0.35); }
+.block .photo-empty :is(span, small) { color: rgba(255, 255, 255, 0.85); }
 
 /* Photo slots: an empty slot names the photo it is waiting for */
 .photo { margin: 0; position: relative; overflow: hidden; aspect-ratio: var(--ratio, 4 / 3); background: var(--mist); }
@@ -258,6 +282,7 @@ ol.numbered strong { color: var(--navy); }
   .site-header { position: static; }
   .section-head p { text-align: left; }
   .section { padding: 4rem 0; }
+  .block { padding: 4.5rem 0; }
   .hero { padding: 4.5rem 0 4rem; }
   .page-hero { padding: 3.5rem 0 3rem; }
   .site-header .container { flex-wrap: wrap; gap: 0.6rem; }

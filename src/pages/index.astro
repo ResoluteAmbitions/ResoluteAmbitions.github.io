@@ -2,51 +2,16 @@
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
 ---
-<Base title="Home">
+<Base title="Home" color="olive">
   {/* Hero photo: add style="--photo: url('/photos/hero.jpg')" to the section. */}
   <section class="hero">
     <div class="container">
       <h1>Service should not start with debt.</h1>
       <p>We make sure those who choose to lead don't begin their service in debt.</p>
       <div class="actions">
-        <a href="/give" class="btn btn-give">Give</a>
+        <a href="/give" class="btn btn-give-light">Give</a>
         <a href="/how-it-works" class="btn btn-light">How it works</a>
         <a href="/apply" class="btn btn-light">Apply</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>About Resolute Ambitions</h2>
-        <p>
-          Resolute Ambitions supports high-potential students and enlisted service members pursuing the path to military officership. Through scholarships and educational support, we reduce the financial burden that too often stands between talented people and a career of service.
-        </p>
-      </div>
-      <div class="cols">
-        <div>
-          <ul class="stars">
-            <li>
-              <h3>The math is broken</h3>
-              <p>Most officers start out in debt, the fully funded paths are limited, and early-career pay leaves little room to pay it down.</p>
-            </li>
-            <li>
-              <h3>Chosen to lead</h3>
-              <p>Our recipients have already committed: a high schooler signing up for ROTC, or an enlisted service member going after the degree to commission.</p>
-            </li>
-            <li>
-              <h3>Every dollar reaches the candidate</h3>
-              <p>A volunteer board, money paid directly to schools, progress checked before every payment, and an independent selection committee.</p>
-            </li>
-            <li>
-              <h3>Built by people who've lived it</h3>
-              <p>A founding circle of officers and professionals who came through the same door.</p>
-            </li>
-          </ul>
-          <a href="/our-story" class="btn">Read our story</a>
-        </div>
-        <Photo hint="Candidates, cadets or a commissioning ceremony" ratio="4 / 5" />
       </div>
     </div>
   </section>
@@ -83,7 +48,62 @@ import Photo from '../components/Photo.astro';
     </div>
   </section>
 
+  {/* Our Story block, in Our Story's color */}
+  <section class="block c-navy">
+    <div class="container cols">
+      <div>
+        <h2>Same room, two paths</h2>
+        <p>
+          Our founders sat in the same unit at 20. One stayed and now develops the officers the country depends on. One left and protected the systems its economy runs on. Both got there because they made it into the room.
+        </p>
+        <blockquote class="quote quote-left">
+          <p>“I got lucky. I would like to be somebody else's luck.”</p>
+          <cite>Chris Kennedy, co-founder</cite>
+        </blockquote>
+        <div class="actions actions-left">
+          <a href="/our-story" class="btn">Read our story</a>
+        </div>
+      </div>
+      <Photo hint="Portrait of Chris Kennedy" ratio="4 / 5" />
+    </div>
+  </section>
+
   <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>About Resolute Ambitions</h2>
+        <p>
+          Resolute Ambitions supports high-potential students and enlisted service members pursuing the path to military officership. Through scholarships and educational support, we reduce the financial burden that too often stands between talented people and a career of service.
+        </p>
+      </div>
+      <div class="cols">
+        <div>
+          <ul class="stars">
+            <li>
+              <h3>The math is broken</h3>
+              <p>Most officers start out in debt, the fully funded paths are limited, and early-career pay leaves little room to pay it down.</p>
+            </li>
+            <li>
+              <h3>Chosen to lead</h3>
+              <p>Our recipients have already committed: a high schooler signing up for ROTC, or an enlisted service member going after the degree to commission.</p>
+            </li>
+            <li>
+              <h3>Every dollar reaches the candidate</h3>
+              <p>A volunteer board, money paid directly to schools, progress checked before every payment, and an independent selection committee.</p>
+            </li>
+            <li>
+              <h3>Built by people who've lived it</h3>
+              <p>A founding circle of officers and professionals who came through the same door.</p>
+            </li>
+          </ul>
+        </div>
+        <Photo hint="Candidates, cadets or a commissioning ceremony" ratio="4 / 5" />
+      </div>
+    </div>
+  </section>
+
+  {/* Who we serve block, in How It Works' color */}
+  <section class="block c-af">
     <div class="container">
       <div class="section-head">
         <h2>Who we serve</h2>
@@ -106,30 +126,19 @@ import Photo from '../components/Photo.astro';
         </div>
       </div>
       <div class="actions">
-        <a href="/how-it-works" class="btn">Who's eligible and how we choose</a>
+        <a href="/how-it-works" class="btn">How it works</a>
+        <a href="/apply" class="btn btn-light">Apply</a>
       </div>
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container cols">
-      <blockquote class="quote">
-        <p>“I got lucky. I would like to be somebody else's luck.”</p>
-        <cite>Chris Kennedy, co-founder</cite>
-        <div class="actions">
-          <a href="/our-story" class="btn">Read our story</a>
-        </div>
-      </blockquote>
-      <Photo hint="Portrait of Chris Kennedy" ratio="4 / 5" tone="blue" />
-    </div>
-  </section>
-
-  <section class="cta">
+  {/* Give block, in Give's color */}
+  <section class="block block-center c-red">
     <div class="container">
       <h2>Every dollar reaches the candidate</h2>
       <p>Money goes directly to the school, never to the individual, and progress is checked before every payment.</p>
       <div class="actions">
-        <a href="/give" class="btn btn-give">Give</a>
+        <a href="/give" class="btn">Give</a>
       </div>
     </div>
   </section>
