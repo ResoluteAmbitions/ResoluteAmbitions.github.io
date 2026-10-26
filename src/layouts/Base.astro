@@ -6,10 +6,13 @@ import '../styles/global.css';
 export interface Props {
   title: string;
   description?: string;
+  /** The page's service color: olive, navy, af, cg, red or space. */
+  color?: 'olive' | 'navy' | 'af' | 'cg' | 'red' | 'space';
 }
 
 const {
   title,
+  color = 'navy',
   description = 'Resolute Ambitions gives scholarships to future military officers so they don\'t start their service in debt.',
 } = Astro.props;
 
@@ -39,7 +42,7 @@ const canonical = new URL(Astro.url.pathname, siteUrl).toString();
 <body>
   <a href="#main" class="skip-link">Skip to content</a>
   <Header />
-  <main id="main">
+  <main id="main" class={`c-${color}`}>
     <slot />
   </main>
   <Footer />
