@@ -19,7 +19,7 @@
   --mist: #f1f2f5;        /* alternate sections */
   --rule: #d5d8de;
   --display: 'Archivo', 'Arial Black', sans-serif;
-  --display-width: 112%;
+  --display-width: 105%;
   --sans: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --serif: 'Source Serif 4', Georgia, serif;
   --max: 72rem;
@@ -145,7 +145,7 @@ a:hover { text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 .hero h1, .page-hero h1 { color: var(--on, var(--paper)); max-width: 22ch; }
 .hero h1 { margin-left: auto; margin-right: auto; }
 /* Home: dress-uniform navy and gold */
-.hero.hero-gold h1 { color: var(--gold); font-stretch: 120%; font-size: clamp(2rem, 4.1vw, 3.2rem); max-width: none; }
+.hero.hero-gold h1 { color: var(--gold); font-stretch: 110%; font-size: clamp(2.1rem, 4.4vw, 3.4rem); max-width: none; }
 .hero.hero-gold p { max-width: 50rem; }
 .hero-gold .btn-light { color: var(--gold) !important; border-color: var(--gold); }
 .hero-gold .btn-light:hover { background: color-mix(in srgb, var(--gold) 14%, transparent); }
