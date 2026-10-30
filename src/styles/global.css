@@ -149,6 +149,10 @@ a:hover { text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 .page-hero { padding: 5rem 0 4.5rem; text-align: left; }
 .hero h1, .page-hero h1 { color: var(--on, var(--paper)); max-width: 22ch; }
 .hero h1 { margin-left: auto; margin-right: auto; }
+/* Home: dress-uniform navy and gold */
+.hero-gold h1 { color: var(--gold); }
+.hero-gold .btn-light { color: var(--gold) !important; border-color: var(--gold); }
+.hero-gold .btn-light:hover { background: color-mix(in srgb, var(--gold) 14%, transparent); }
 .hero p, .page-hero p { font-size: 1.2rem; line-height: 1.55; }
 .hero p { margin-left: auto; margin-right: auto; }
 .hero p { max-width: 38rem; }
