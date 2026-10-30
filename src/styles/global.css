@@ -149,6 +149,8 @@ a:hover { text-decoration-color: var(--green); text-decoration-thickness: 2px; }
 .hero.hero-gold p { max-width: 50rem; }
 .hero-gold .btn-light { color: var(--gold) !important; border-color: var(--gold); }
 .hero-gold .btn-light:hover { background: color-mix(in srgb, var(--gold) 14%, transparent); }
+.hero-gold .btn-give-light { background: var(--gold); color: var(--navy) !important; }
+.hero-gold .btn-give-light:hover { background: #ffd83a; }
 .hero p, .page-hero p { font-size: 1.2rem; line-height: 1.55; }
 .hero p { margin-left: auto; margin-right: auto; }
 .hero p { max-width: 38rem; }
