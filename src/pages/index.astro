@@ -1,27 +1,34 @@
 ---
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
+import GiveStrip from '../components/GiveStrip.astro';
 ---
 <Base title="Home" color="olive">
   {/* Hero photo: add style="--photo: url('/photos/hero.jpg')" to the section. */}
   <section class="hero">
     <div class="container">
       <h1>Service should not start with debt.</h1>
-      <p>We make sure those who choose to lead don't begin their service in debt.</p>
+      <p>Every year, people with the grades and the commitment to lead walk away from a commission over a tuition bill. We give them scholarships, so cost stops deciding who gets to lead.</p>
       <div class="actions">
-        <a href="/give" class="btn btn-give-light">Give</a>
         <a href="/how-it-works" class="btn btn-light">How it works</a>
         <a href="/apply" class="btn btn-light">Apply</a>
       </div>
     </div>
   </section>
+  <GiveStrip />
 
   <section class="section section-alt">
     <div class="container">
       <div class="section-head">
-        <h2>The problem, in plain terms</h2>
+        <h2>The best candidates for the military can't afford to be one</h2>
         <p>
-          Becoming a military officer requires a college degree. The fully funded paths (service academies and full ROTC scholarships) reach only a fraction of the people who commission. Everyone else pays for some or all of their education themselves.
+          The battlefield isn't a field anymore. It's networks, code, satellites and the systems the country's economy runs on. Leading there takes the kind of education the top programs in engineering, computer science and cyber are built to give.
+        </p>
+        <p>
+          Those programs are also the most expensive. A top university that hosts an ROTC unit costs close to $100,000 a year. ROTC awards are fixed amounts that haven't kept pace with tuition, and the federal loans a family can take out now stop at $65,000, for all four years.
+        </p>
+        <p>
+          So a high school senior with the grades, the drive and the acceptance letter does what thousands of candidates do. She picks a cheaper school than the one that admitted her, takes on the debt, or takes the job offer that pays more. The military never finds out what it lost.
         </p>
       </div>
       <div class="stats">
@@ -45,6 +52,11 @@ import Photo from '../components/Photo.astro';
       <blockquote class="quote">
         <p>“We don't lose these candidates in the interview. We lose them at the tuition bill.”</p>
       </blockquote>
+      <div class="section-head" style="margin-top: 3rem;">
+        <p>
+          That's the gap. The officers we'll ask to lead how this country protects itself are being shaped by what they could afford, not by what they could do. And the ones who make it in carrying debt leave earlier, first from the specialties the country is shortest of: cyber, communications, technology and intelligence.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -54,7 +66,10 @@ import Photo from '../components/Photo.astro';
       <div class="section-head">
         <h2>Who we serve</h2>
         <p>
-          Our recipients have already committed. We fill the middle, the gap between where scholarships and family help end and the bill begins.
+          Our recipients have already raised their hand: a high schooler signing up for ROTC, or an enlisted service member going after the degree they need to commission. They've done the hard part. We make sure money isn't the reason they end up somewhere smaller than their ambition.
+        </p>
+        <p>
+          That's why we don't spread small awards thin. We fund a substantial share of the cost when it changes where a candidate can go, so they can attend the school that admitted them, not the one they could afford.
         </p>
       </div>
       <div class="cards">
@@ -98,8 +113,8 @@ import Photo from '../components/Photo.astro';
               <p>Our recipients have already committed: a high schooler signing up for ROTC, or an enlisted service member going after the degree to commission.</p>
             </li>
             <li>
-              <h3>Every dollar reaches the candidate</h3>
-              <p>A volunteer board, money paid directly to schools, progress checked before every payment, and an independent selection committee.</p>
+              <h3>Straight to the school</h3>
+              <p>A volunteer board, scholarship money paid directly to schools, progress checked before every payment, and an independent selection committee.</p>
             </li>
             <li>
               <h3>Built by people who've lived it</h3>
@@ -115,8 +130,8 @@ import Photo from '../components/Photo.astro';
   {/* Give block, in Give's color */}
   <section class="block block-center c-red">
     <div class="container">
-      <h2>Every dollar reaches the candidate</h2>
-      <p>Money goes directly to the school, never to the individual, and progress is checked before every payment.</p>
+      <h2>Paid straight to the school</h2>
+      <p>Scholarship money never passes through a recipient's hands. It goes to the school, and we check enrollment and academic progress before every payment.</p>
       <div class="actions">
         <a href="/give" class="btn">Give</a>
       </div>

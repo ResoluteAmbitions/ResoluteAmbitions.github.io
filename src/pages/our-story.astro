@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Photo from '../components/Photo.astro';
+import GiveStrip from '../components/GiveStrip.astro';
 ---
 <Base title="Our Story" description="Same room, two paths. The founders of Resolute Ambitions and why they started it.">
   <section class="page-hero">
@@ -11,6 +12,7 @@ import Photo from '../components/Photo.astro';
       </p>
     </div>
   </section>
+  <GiveStrip />
 
   <section class="section">
     <div class="container">
@@ -69,18 +71,34 @@ import Photo from '../components/Photo.astro';
 
   <section class="section">
     <div class="container">
-      <div class="section-head">
-        <h2>Money buys proximity</h2>
-        <p>
-          Tuition buys a seat, and the seat puts you in the room with the people who change your life. Nobody ever knows the mentor they didn't meet.
-        </p>
-        <p>
-          The debt shadow lasts decades. It sits in the middle of every decision: when to marry, when to have kids, whether you can afford to stay in a job you love.
-        </p>
-        <p>
-          Luck is not a strategy for staffing the leadership of the United States military.
-        </p>
+      <p class="statement">Tuition buys a seat. The seat puts you in the room.</p>
+      <div class="beats">
+        <div>
+          <h3>Who was standing nearby</h3>
+          <p>
+            Look back at Chris's seven accidents and most of them aren't about money at all. They're about who happened to be close by. A recruiter who gave up a quota. A classmate's father who lent him the money to stay. The Marines in his unit, who are general officers now and still his closest circle.
+          </p>
+        </div>
+        <div>
+          <h3>The mentors</h3>
+          <p>
+            Colonel Heesacker steered him toward the Marine Corps. Lieutenant Colonel Bennett drove him to the Navy medical center and fought a disqualifying eye finding weeks before his commissioning. Neither went looking for him. Chris met them because a scholarship, and a loan, had put him in the room.
+          </p>
+        </div>
+        <div>
+          <h3>The mentor you never meet</h3>
+          <p>
+            That's what tuition really buys: a seat close enough to the people who will change your life. A candidate priced out of that room never learns who they missed. Nobody ever knows the mentor they didn't meet.
+          </p>
+        </div>
+        <div>
+          <h3>The debt shadow</h3>
+          <p>
+            The cost doesn't end at graduation. Debt follows a young officer for decades and sits in the middle of every decision: when to marry, when to have kids, whether you can afford to stay in a job you love. Years later, Chris and his wife were still paying off their own loans while saving for their two daughters.
+          </p>
+        </div>
       </div>
+      <p class="coda">Luck is not a strategy for staffing the leadership of the United States military.</p>
     </div>
   </section>
 
@@ -106,7 +124,7 @@ import Photo from '../components/Photo.astro';
 
   <section class="block block-center c-red">
     <div class="container">
-      <h2>Every dollar reaches the candidate</h2>
+      <h2>Every scholarship dollar goes straight to the school</h2>
       <div class="actions">
         <a href="/give" class="btn">Give</a>
       </div>
