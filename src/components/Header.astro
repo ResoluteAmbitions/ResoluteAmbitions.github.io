@@ -3,7 +3,6 @@ const { pathname } = Astro.url;
 const isActive = (path: string) => pathname === path || pathname === path + '/';
 ---
 <header class="site-header">
-  <div class="ribbon" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
   <div class="container">
     {/* Interim mark: wordmark with a Mameluke sword beneath, while the logo is in progress. */}
     <a href="/" class="brand" aria-label="Resolute Ambitions home">
@@ -31,5 +30,4 @@ const isActive = (path: string) => pathname === path || pathname === path + '/';
       <a href="/give" class="btn btn-give">Give</a>
     </nav>
   </div>
-  <div class="ribbon" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
 </header>
